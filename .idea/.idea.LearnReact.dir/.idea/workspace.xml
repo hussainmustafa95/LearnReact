@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb8c8c4e-eaaf-47c7-9d6e-6c0fe404510d" name="Changes" comment="" />
+    <list default="true" id="cb8c8c4e-eaaf-47c7-9d6e-6c0fe404510d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnReact.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LearnReact.dir/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +68,7 @@
       <workItem from="1681830185083" duration="2979000" />
       <workItem from="1682449910332" duration="1373000" />
       <workItem from="1682877836119" duration="321000" />
+      <workItem from="1683913846997" duration="565000" />
     </task>
     <servers />
   </component>
