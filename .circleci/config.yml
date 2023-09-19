@@ -15,11 +15,10 @@ jobs:
           echo "VERSION_NUMBER=20.0.0" >> $BASH_ENV
           mkdir -p packages
           cp $BASH_ENV packages/bash.env
+          echo $VERSION_NUMBER
       - run: |
           echo "export FOO=BAR" >> $BASH_ENV
-      - run: |
-          # verify; optional step
-          printenv VERSION_NUMBER
+
       - persist_to_workspace:
           root: packages
           paths:
