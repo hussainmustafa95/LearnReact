@@ -33,7 +33,7 @@ jobs:
           cat bash.env >> $BASH_ENV
       - run: |
           # verify; this should print 'BAR'
-          printenv VERSION_NUMBER
+          cat $BASH_ENV | grep VERSION_NUMBER
 
 workflows:
   main:
