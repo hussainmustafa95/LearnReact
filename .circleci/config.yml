@@ -12,18 +12,16 @@ jobs:
     steps:
       - checkout
       - run: |
-          cd react-app
-          ls
-          ./get-version.sh
+          echo "VERSION_NUMBER=20.0.0" >> $BASH_ENV
+          mkdir -p packages
+          cp $BASH_ENV packages/bash.env
       - run: |
           echo "export FOO=BAR" >> $BASH_ENV
       - run: |
           # verify; optional step
-          printenv FOO
-      - run: |
-          cp $BASH_ENV bash.env
+          printenv VERSION_NUMBER
       - persist_to_workspace:
-          root: .
+          root: packages
           paths:
             - .
   load-env-var:
