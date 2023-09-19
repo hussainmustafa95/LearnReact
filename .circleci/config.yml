@@ -29,7 +29,8 @@ jobs:
       - attach_workspace:
           at: packages
       - run: |
-          ls 
+          cd packages
+          ls
       - run: |
           # verify; this should print 'BAR'
           printenv VERSION_NUMBER
