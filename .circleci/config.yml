@@ -27,7 +27,7 @@ jobs:
     executor: basic
     steps:
       - attach_workspace:
-          at: .
+          at: packages
       - run: |
           cat bash.env >> $BASH_ENV
       - run: |
