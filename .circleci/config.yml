@@ -30,7 +30,7 @@ jobs:
           at: packages
       - run: |
           cd packages
-          ls
+          cat bash.env
       - run: |
           # verify; this should print 'BAR'
           printenv VERSION_NUMBER
