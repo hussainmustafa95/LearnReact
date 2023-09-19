@@ -15,7 +15,7 @@ jobs:
           echo "VERSION_NUMBER=20.0.0" >> $BASH_ENV
           mkdir -p packages
           cp $BASH_ENV packages/bash.env
-          echo $VERSION_NUMBER
+          echo ${VERSION_NUMBER}
       - run: |
           echo "export FOO=BAR" >> $BASH_ENV
 
