@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          ./get-version.sh
+          ./react-app/get-version.sh
       - run: |
           echo "export FOO=BAR" >> $BASH_ENV
       - run: |
