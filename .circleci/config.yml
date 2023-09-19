@@ -32,7 +32,7 @@ jobs:
           cat bash.env >> $BASH_ENV
       - run: |
           # verify; this should print 'BAR'
-          printenv FOO
+          printenv VERSION_NUMBER
 
 workflows:
   main:
