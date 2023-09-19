@@ -13,6 +13,7 @@ jobs:
       - checkout
       - run: |
           cd react-app
+          ls
           ./get-version.sh
       - run: |
           echo "export FOO=BAR" >> $BASH_ENV
