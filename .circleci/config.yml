@@ -22,7 +22,7 @@ jobs:
       - persist_to_workspace:
           root: packages
           paths:
-            - .
+            - bash.env
   load-env-var:
     executor: basic
     steps:
