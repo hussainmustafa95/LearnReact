@@ -29,6 +29,7 @@ jobs:
       - attach_workspace:
           at: packages
       - run: |
+          ls 
           cd packages
           cat bash.env >> $BASH_ENV
       - run: |
