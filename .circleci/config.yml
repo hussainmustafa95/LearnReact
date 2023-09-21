@@ -13,6 +13,7 @@ jobs:
       - checkout
       - run: |
           echo "VERSION_NUMBER=20.0.0" >> $BASH_ENV
+          ls
           mkdir -p packages
           cp $BASH_ENV packages/bash.env
           echo ${VERSION_NUMBER}
