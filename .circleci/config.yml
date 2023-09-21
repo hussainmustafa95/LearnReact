@@ -26,6 +26,7 @@ jobs:
   load-env-var:
     executor: basic
     steps:
+      - checkout
       - attach_workspace:
           at: packages
       - run: |
