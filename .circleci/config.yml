@@ -19,37 +19,18 @@ jobs:
       - run: 
           name: create env var 2
           command: |
-            echo "export VERSION_NUMBER=20.0.0" >> $BASH_ENV
+            pwd 
             ls
-            mkdir -p packages
-            cp $BASH_ENV packages/bash.env
-            echo ${VERSION_NUMBER}
+            cd react-app
+            
+            ls
       - run: 
           name: create env var 3
           command: |
-              ls
-              pwd
-              cat $BASH_ENV
-              echo ${VERSION_NUMBER}
-              echo "export FOO=BAR" >> $BASH_ENV
-          
-
-      - persist_to_workspace:
-          root: packages
-          paths:
-            - bash.env
-  load-env-var:
-    executor: basic
-    steps:
-      - checkout
-      - attach_workspace:
-          at: packages
-      - run: |
-          source bash.env 
-          echo ${VERSION_NUMBER}
-      - run: |
-          # verify; this should print 'BAR'
-          cat $BASH_ENV | grep VERSION_NUMBER
+            pwd 
+            ls
+            cd react-app
+            ls
 
 workflows:
   main:
