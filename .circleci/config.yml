@@ -11,12 +11,12 @@ jobs:
     executor: basic
     steps:
       - checkout
-      - run: |
+      - run: 
           name: create env var
           command: |
             ls
             pwd
-      - run: |
+      - run: 
           name: create env var 2
           command: |
             echo "export VERSION_NUMBER=20.0.0" >> $BASH_ENV
@@ -24,7 +24,7 @@ jobs:
             mkdir -p packages
             cp $BASH_ENV packages/bash.env
             echo ${VERSION_NUMBER}
-      - run: |
+      - run: 
           name: create env var 3
           command: |
               ls
