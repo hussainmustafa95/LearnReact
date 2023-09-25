@@ -36,6 +36,3 @@ workflows:
   main:
     jobs:
       - create-env-var
-      - load-env-var:
-          requires:
-            - create-env-var
