@@ -12,6 +12,9 @@ jobs:
     steps:
       - checkout
       - run: |
+          ls
+          pwd
+      - run: |
           echo "VERSION_NUMBER=20.0.0" >> $BASH_ENV
           ls
           mkdir -p packages
