@@ -12,16 +12,27 @@ jobs:
     steps:
       - checkout
       - run: |
-          ls
-          pwd
+          name: create env var
+          command: |
+            ls
+            pwd
       - run: |
-          echo "VERSION_NUMBER=20.0.0" >> $BASH_ENV
-          ls
-          mkdir -p packages
-          cp $BASH_ENV packages/bash.env
-          echo ${VERSION_NUMBER}
+          name: create env var 2
+          command: |
+            echo "export VERSION_NUMBER=20.0.0" >> $BASH_ENV
+            ls
+            mkdir -p packages
+            cp $BASH_ENV packages/bash.env
+            echo ${VERSION_NUMBER}
       - run: |
-          echo "export FOO=BAR" >> $BASH_ENV
+          name: create env var 3
+          command: |
+              ls
+              pwd
+              cat $BASH_ENV
+              echo ${VERSION_NUMBER}
+              echo "export FOO=BAR" >> $BASH_ENV
+          
 
       - persist_to_workspace:
           root: packages
