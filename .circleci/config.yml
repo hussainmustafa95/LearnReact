@@ -45,9 +45,8 @@ jobs:
       - attach_workspace:
           at: packages
       - run: |
-          ls 
-          cd packages
-          cat bash.env >> $BASH_ENV
+          source bash.env 
+          echo ${VERSION_NUMBER}
       - run: |
           # verify; this should print 'BAR'
           cat $BASH_ENV | grep VERSION_NUMBER
