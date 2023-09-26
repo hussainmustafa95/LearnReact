@@ -28,8 +28,22 @@ jobs:
             ls
             cd react-app
             ls
+  load-env-var:
+    executor: basic
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: 
+          name: load env var
+          command: |
+            cat bash.env >> $BASH_ENV
+            echo ${VERSION_NUMBER}
 
 workflows:
   main:
     jobs:
       - create-env-var
+      - load-env-var:
+          requires:
+            - create-env-var
