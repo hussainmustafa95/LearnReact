@@ -41,6 +41,8 @@ jobs:
       - run: 
           name: load env var
           command: |
+            echo bash.env
+            cat bash.env
             cat bash.env >> $BASH_ENV
             echo ${VERSION_NUMBER}
 
