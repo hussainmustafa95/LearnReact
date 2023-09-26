@@ -14,16 +14,13 @@ jobs:
       - run: 
           name: create env var
           command: |
-            ls
-            pwd
+            echo "export VERSION_NUMBER=$version" >> $BASH_ENV
+            cp "$BASH_ENV" bash.env
       - run: 
           name: create env var 2
           command: |
-            pwd 
-            ls
-            cd react-app
-            
-            ls
+            cat bash.env >> $BASH_ENV
+            echo ${VERSION_NUMBER}
       - run: 
           name: create env var 3
           command: |
