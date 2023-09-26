@@ -28,6 +28,10 @@ jobs:
             ls
             cd react-app
             ls
+      - persist_to_workspace: 
+            root: .
+            paths:
+                - bash.env
   load-env-var:
     executor: basic
     steps:
